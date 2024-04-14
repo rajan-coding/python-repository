@@ -10,7 +10,7 @@ print(fruits[1:])
 fruits[1]="banana"
 print(fruits)
 
-fruits.insert(1,"apple")
+fruits.insert(1,"appleqqqqqqq")
 
 
 fruits.append(numbers)

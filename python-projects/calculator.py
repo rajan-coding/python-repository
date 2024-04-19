@@ -1,4 +1,4 @@
-
+from pynput import keyboard
 def do_calculate():
     print("Welcome to Python Calculator, this is basic arithmetic calculator, you can exit the calculator by typing q at anytime")
     valid=True
@@ -27,4 +27,20 @@ def do_calculate():
         except Exception as e:
             print(e,",please try again")
 
-do_calculate()
+def on(key):
+   if key=='q':
+       print(f"key pressed {key}")
+
+def off(key):
+   if key=='q':
+       print(f"key pressed {key}")
+
+
+
+def main():
+    do_calculate()
+    with keyboard.Listener(on_press=on,on_release=off) as listener:
+        listener.join()
+
+
+main()

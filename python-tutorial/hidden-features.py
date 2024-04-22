@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 #anonymous variable
 
 coordinate =[5,10]
@@ -63,3 +65,29 @@ def parse_value(key,target):
     print(key,target)
 
 parse_value(**values)
+
+#default dictionary
+
+char_count={}
+
+string="aaadcdanfjafadfrknxzmnc"
+
+for char in string:
+    if char not in char_count:
+        char_count[char]=0
+
+    char_count[char]+=1
+
+print(char_count)
+
+def default():
+    return 0
+
+char_count=defaultdict(default)
+
+for char in string:
+    char_count[char]+=1
+
+print(char_count)
+
+    

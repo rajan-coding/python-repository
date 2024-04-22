@@ -52,3 +52,30 @@ def not_string(str):
       return "not" + str
     else:
       return str
+    
+def missing_char(str, n):
+    s=list(str)
+    s[n]=""
+    return "".join(s)
+
+def front_back(str):
+    if len(str)==1 or len(str)==0:
+     return str
+    s=list(str)
+    temp=s[0]
+    s[0]=s[len(s)-1]
+    s[len(s)-1]=temp
+    return "".join(s)
+
+def front3(str):
+    if len(str) <=3:
+        s=str*3
+        return s
+    else:
+        s=list(str)
+        s=s[:3]
+        s="".join(s) * 3
+        return s
+    
+
+print(front3("Java"))

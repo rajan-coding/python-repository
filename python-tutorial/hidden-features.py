@@ -43,3 +43,23 @@ for item in items:
     i +=1
 else:
     print("not found")
+
+# argument unpacking
+
+
+def numbers(a,b,c,d):
+    print(a,b,c,d)
+
+list=["a","b","c","d"]
+
+numbers(*list)
+
+values ={
+    "key":"5",
+    "target":10
+}
+
+def parse_value(key,target):
+    print(key,target)
+
+parse_value(**values)

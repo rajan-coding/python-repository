@@ -89,5 +89,3 @@ for char in string:
     char_count[char]+=1
 
 print(char_count)
-
-    

@@ -45,6 +45,28 @@ def no_teen_sum(a, b, c):
 
    return sum
 
+def round_sum(a, b, c):
+   sum =0
+   lst=[]
+   lst.append(a)
+   lst.append(b)
+   lst.append(c)
+
+   for i in lst:
+      remainder=i%10 
+      if remainder >=5:
+         to_add=10-remainder
+         i=i+to_add
+         sum+=i
+      else:
+         i=i-remainder
+         sum+=i
+   return sum
+         
+
+print(round_sum(12,13,14))
+         
+         
 
    
 
